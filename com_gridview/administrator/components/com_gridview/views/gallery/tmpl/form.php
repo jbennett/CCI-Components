@@ -8,8 +8,8 @@
 	<fieldset>
 		<legend><?= @text('Gallery Details')?></legend>
 
-		<label for="field_name" class="mainlabel"><?= @text('Name') ?></label>
-		<input type="text" name="name" id="field_name" value="<?=$gallery->name;?>" /><br/>
+		<label for="field_title" class="mainlabel"><?= @text('Title') ?></label>
+		<input type="text" name="title" id="field_title" value="<?=$gallery->title;?>" /><br/>
 
 		<label for="field_label1" class="mainlabel"><?= @text('Primary Label') ?></label>
 		<input type="text" name="label1" id="field_label1" value="<?=$gallery->label1;?>" /><br/>

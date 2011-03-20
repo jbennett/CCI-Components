@@ -28,7 +28,7 @@
 				<td align="center"><?=$index?></td>
 				<td><?= @helper('grid.checkbox', array('row'=>$gallery))?></td>
 				<td><a href="<?= @route('view=gallery&id='.$gallery->id)?>">
-					<?=$gallery->name?>
+					<?=$gallery->title?>
 				</a></td>
 				<td align="center"><a href="<?= @route('view=samples&gallery_id='.$gallery->id)?>">
 					<?= @text('Samples') ?>
