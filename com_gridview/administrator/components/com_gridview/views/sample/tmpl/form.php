@@ -29,6 +29,7 @@
 		<legend><?= @text('Sample Description')?></legend>
 		<p>Please note, a description will disable all other sample labels</p>
 		<?= @editor(array('editor'=>null))?>
+	</fieldset>
 </div>
 </form>
 
