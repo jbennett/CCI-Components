@@ -1,23 +1,23 @@
 <?php
 defined('KOOWA') or die;
 
-class ComGridviewModelSamples extends KModelTable {
+class ComGridviewModelImages extends KModelTable {
 
 	public function __construct(KConfig $config) {
 		parent::__construct($config);
 
 		$this->_state
-			->insert('gallery',		'int')
+			->insert('sample',		'int')
 			->insert('enabled',		'int');
 	}
 
 	protected function _buildQueryJoins(KDatabaseQuery $query) {
-		$query->join('LEFT', 'gridview_galleries AS g', 'tbl.gridview_gallery_id = g.gridview_gallery_id');
+		$query->join('LEFT', 'gridview_samples AS s', 'tbl.gridview_sample_id = s.gridview_sample_id');
 		parent::_buildQueryJoins($query);
 	}
 
 	protected function _buildQueryColumns(KDatabaseQuery $query) {
-		$query->columns[] = 'g.title AS gallery_title';
+		$query->columns[] = 's.title AS sample_title';
 		parent::_buildQueryColumns($query);
 	}
 
@@ -30,7 +30,7 @@ class ComGridviewModelSamples extends KModelTable {
 		// $state->enabled // TODO: add this
 
 		if ($state->gallery)
-			$query->where('tbl.gridview_gallery_id', '=', $state->gallery);
+			$query->where('tbl.gridview_sample_id', '=', $state->gallery);
 
 		parent::_buildQueryWhere($query);
 	}
