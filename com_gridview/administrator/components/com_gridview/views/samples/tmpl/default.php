@@ -1,9 +1,26 @@
 <? defined('KOOWA') or die(); ?>
 <?= @helper('behavior.tooltip'); ?>
-
 <style src="media://lib_koowa/css/admin.css" />
 
 <form action="<?= @route(); ?>" method="get">
+	<table>
+		<tbody>
+			<tr>
+				<td width="100%">&nbsp;</td>
+				<td nowrap="nowrap">
+					<?= @helper('admin::com.gridview.template.helper.listbox.galleries', array(
+						'attribs'=>array(
+							'onchange'=>'this.form.submit();'
+						),
+						'selected'=>KRequest::get('get.gallery', 'int'),
+						'name'=>'gallery',
+					)) ?>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
 	<table class="adminlist">
 		<thead>
 			<tr>
@@ -25,7 +42,8 @@
 		</tfoot>
 
 		<tbody>
-			<? foreach ($samples as $index=>$sample): ?>
+			<? $index = 1;
+			foreach ($samples as $sample): ?>
 			<tr class="row<?=$index % 2?>">
 				<td align="center"><?=$index?></td>
 				<td><?= @helper('grid.checkbox', array('row'=>$sample))?></td>
@@ -33,14 +51,16 @@
 					<?=$sample->title?>
 				</a></td>
 				<td align="center"><?= @helper('grid.order', array('row'=>$sample, 'total'=>$total))?></td>
-				<td align="center"><a href="<?= @route('view=images&sample_id='.$sample->id)?>">
+				<td align="center"><a href="<?= @route('view=images&sample='.$sample->id)?>">
 					<?= @text('Images') ?>
 				</a></td>
 				<td align="center"><a href="<?= @route('view=gallery&id='.$sample->gridview_gallery_id)?>">
 					<?= $sample->gallery_title; ?>
 				</a></td>
 			</tr>
-			<? endforeach; ?>
+			<?
+			$index++;
+			endforeach; ?>
 
 			<? if (!count($samples)): ?>
 			<tr>
