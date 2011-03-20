@@ -14,5 +14,17 @@ class ComGridviewTemplateHelperListbox extends ComDefaultTemplateHelperListbox {
 
 		return parent::_listbox($config);
 	}
+
+	public function samples($config = array()) {
+		$config = new KConfig($config);
+		$config->append(array(
+			'model' => 'samples',
+			'name'	=> 'gridview_sample_id',
+			'value'	=> 'id',
+			'text'	=> 'title'
+		));
+
+		return parent::_listbox($config);
+	}
 }
 ?>
