@@ -29,8 +29,8 @@ class ComGridviewModelImages extends KModelTable {
 		$state = $this->_state;
 		// $state->enabled // TODO: add this
 
-		if ($state->gallery)
-			$query->where('tbl.gridview_sample_id', '=', $state->gallery);
+		if ($state->sample)
+			$query->where('tbl.gridview_sample_id', '=', $state->sample);
 
 		parent::_buildQueryWhere($query);
 	}

@@ -48,7 +48,7 @@
 				<td><?= @helper('grid.checkbox', array('row'=>$image))?></td>
 				<td><a href="<?=@route('view=image&id='.$image->id)?>">
 					<?php if ($image->filename): ?>
-						<img src="<?= $image->filename?>" height="30" />
+						<img src="/media/com_gridview/uploads/<?= $image->filename?>" height="30" />
 					<? else: ?>
 						No Preview
 					<? endif; ?>
