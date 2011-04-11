@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `#_gridview_samples` (
 CREATE TABLE IF NOT EXISTS `#_gridview_images` (
 	`gridview_image_id` SERIAL,
 	`filename` VARCHAR(255),
+	`filetype` VARCHAR(10),
 
 	`ordering` BIGINT(20) UNSIGNED NOT NULL,
 
