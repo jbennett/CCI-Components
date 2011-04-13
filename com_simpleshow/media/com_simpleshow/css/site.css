@@ -30,6 +30,7 @@
 		overflow: hidden;
 		padding: 6px 10px;
 		position: absolute;
+		text-align: left;
 		width: 435px;
 	}
 	.mod_simpleshow .main .title {
