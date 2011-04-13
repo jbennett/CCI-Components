@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>Simple Slideshow</name>
+	<author>Jonathan Bennett</author>
+	<creationDate>Apr 2011</creationDate>
+	<copyright>Copyright (C) 2011 CCI Studios</copyright>
+	<license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>jbennett@ccistudios.com</authorEmail>
+	<authorUrl>www.ccistudios.com</authorUrl>
+	<version>1</version>
+	<description></description>
+	<files>
+		<file module="mod_simpleshow">mod_simpleshow.php</file>
+		<file>html.php</file>
+		<file>tmpl/default.php</file>
+	</files>
+</install>
