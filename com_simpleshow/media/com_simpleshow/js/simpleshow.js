@@ -6,7 +6,7 @@
 			duration, transition;
 			
 		transition = 1500;
-		duration = 3000
+		duration = 3000;
 		
 		current = container.getElement('.current');
 		next = container.getElement('.next');
@@ -30,7 +30,8 @@
 						
 					current.getElement('img').src = next.getElement('img').src;
 					current.getElement('.title').setText(next.getElement('.title').getText());
-					current.getElement('.subtitle').setText(next.getElement('.subtitle').getText());
+					current.getElement('.subtitle a').setText(next.getElement('.subtitle a').getText());
+					current.getElement('.subtitle a').setProperty('href', next.getElement('.subtitle a').getProperty('href'));
 						
 					(function() {
 						images_toggles[index].start(0.5);
@@ -43,7 +44,8 @@
 						next_toggle.set(0);
 						next.getElement('img').src = '/images/stories/headers/' + images[index].getProperty('data-filename');
 						next.getElement('.title').setText(images[index].getProperty('data-title'));
-						next.getElement('.subtitle').setText(images[index].getProperty('data-subtitle'));
+						next.getElement('.subtitle a').setText(images[index].getProperty('data-subtitle'));
+						next.getElement('.subtitle a').setProperty('href', images[index].getProperty('data-url'));
 						next_toggle.start(1);
 						
 						console.log(next.getElement('.title'));
@@ -67,7 +69,8 @@
 			
 			next.getElement('img').src = '/images/stories/headers/' + images[index].getProperty('data-filename');
 			next.getElement('.title').setText(images[index].getProperty('data-title'));
-			next.getElement('.subtitle').setText(images[index].getProperty('data-subtitle'));
+			next.getElement('.subtitle a').setText(images[index].getProperty('data-subtitle'));
+			next.getElement('.subtitle a').setProperty('href', images[index].getProperty('data-url'));
 			next_toggle.start(1);
 		}).delay(duration);
 	};

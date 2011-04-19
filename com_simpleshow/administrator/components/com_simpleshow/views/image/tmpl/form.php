@@ -10,8 +10,11 @@
 
 		<label for="field_title" class="mainlabel"><?= @text('Title') ?></label>
 		<input image="text" name="title" id="field_title" value="<?=$image->title;?>" /><br/>
-		<label for="field_subtitle" class="mainlabel"><?= @text('subtitle') ?></label>
+		<label for="field_subtitle" class="mainlabel"><?= @text('Subtitle') ?></label>
 		<input image="text" name="subtitle" id="field_subtitle" value="<?=$image->subtitle;?>" /><br/>
+		
+		<label for="field_url" class="mainlabel"><?= @text('Address') ?></label>
+		<input image="text" name="url" id="field_url" value="<?=$image->url;?>" /><br/>
 		
 		<label for="field_title" class="mainlabel"><?= @text('Title') ?></label>
 		<?= @helper('image.listbox', array('directory'=>JPATH_IMAGES.'/stories/headers', 'name'=>'filename'))?><br/>

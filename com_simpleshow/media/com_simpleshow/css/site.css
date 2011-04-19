@@ -38,10 +38,12 @@
 		font-size: 25px;
 		line-height: 1.2em;
 	}
-	.mod_simpleshow .main .subtitle {
+	.mod_simpleshow .main .subtitle,
+	.mod_simpleshow .main .subtitle a {
 		color: #010101;
 		font-size: 14px;
 		line-height: 1.2em;
+		text-decoration: none;
 	}
 
 .mod_simpleshow .images {

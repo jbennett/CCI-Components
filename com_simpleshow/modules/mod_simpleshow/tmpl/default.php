@@ -10,7 +10,9 @@
 				
 				<div class="description">
 					<div class="title"><?= $image->title?></div>
-					<div class="subtitle"><?= $image->subtitle?></div>
+					<div class="subtitle">
+						<a href="<?= $image->url?>"><?= $image->subtitle?></a>
+					</div>
 				</div>
 			</div>
 
@@ -29,6 +31,7 @@
 			class="image <?= ($first)? 'active':''?>"
 			data-title="<?= $image->title; ?>"
 			data-subtitle="<?= $image->subtitle; ?>"
+			data-url="<?= $image->url; ?>"
 			data-filename="<?= $image->filename?>">
 			<img src="/images/stories/headers/thumb_<?=$image->filename?>" width="279" height="73" />
 		</div>
